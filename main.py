@@ -58,8 +58,8 @@ for c in range(counter):
             if e == 1:
                 number_of_wins += 1
             
-        # os.system('clear')
-        # game_board.display()
+        os.system('clear')
+        game_board.display()
 
         if game_tree.direction == "left":
             game_tree.prev_direction = 0
@@ -75,7 +75,7 @@ for c in range(counter):
         # If you decressing depth, active it:
         # time.sleep(0.5)       
     stop = timeit.default_timer()
-    with open('resultAlpahBeta.csv', 'a', newline='') as file:
-        writer = csv.writer(file)
-        writer.writerow([coefficients["neighbors"], coefficients["dot"], coefficients["wall"], coefficients["loop"], coefficients["manhatan"], coefficients["path"], panic_dist, wall_rate, depth, randomness, probability, np.average(packMan_score), np.amax(packMan_score), np.min(packMan_score), number_of_wins/counter, (stop - start)/counter])
+#    with open('resultAlpahBeta.csv', 'a', newline='') as file:
+#        writer = csv.writer(file)
+#        writer.writerow([coefficients["neighbors"], coefficients["dot"], coefficients["wall"], coefficients["loop"], coefficients["manhatan"], coefficients["path"], panic_dist, wall_rate, depth, randomness, probability, np.average(packMan_score), np.amax(packMan_score), np.min(packMan_score), number_of_wins/counter, (stop - start)/counter])
     
